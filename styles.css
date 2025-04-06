@@ -1,0 +1,35 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #student-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #student-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #student-list li:last-child {
+    border-bottom: none;
+  }
