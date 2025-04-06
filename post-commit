@@ -30,3 +30,4 @@ if (process.argv.length > 2) {
   const studentName = process.argv[2];
   commitStudentPresence(studentName);
 }
+
