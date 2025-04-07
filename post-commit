@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# Get the commit message
+commit_message=$(git log -1 --format=%s)
+
+# Get the student's name from the commit message
+student_name=$(echo "$commit_message" | grep -oE "[A-Za-z]+ [A-Za-z]+")
+
+# Run the commitStudentPresence function
+node script.js "$student_name"
+
+
+3. Make the post-commit file executable by running the command chmod +x .git/hooks/post-commit.
+
+## Step 6: Update the script.js File
+1. Update the script.js file to include the commitStudentPresence function:
+
+
+// script.js
+
+// ...
+
+// Function to update student presence
+function commitStudentPresence(studentName) {
+  updateStudentPresence(studentName, "Present");
+}
+
+// Run the commitStudentPresence function when the script is called
+if (process.argv.length > 2) {
+  const studentName = process.argv[2];
+  commitStudentPresence(studentName);
+}
